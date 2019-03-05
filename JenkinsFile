@@ -39,7 +39,7 @@ pipeline {
         
 		always {
 		
-            archiveArtifacts artifacts: ''spring-boot-samples\\spring-boot-sample-atmosphere\\target\\*.jar'', fingerprint: true
+            archiveArtifacts artifacts: 'spring-boot-samples\\spring-boot-sample-atmosphere\\target\\*.jar', fingerprint: true
 			
         }
     }
