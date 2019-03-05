@@ -6,31 +6,31 @@ pipeline {
         
 		stage('Clean') { 
             steps {
-                bat 'mvn clean' 
+                bat 'mvn -f spring-boot-samples\\spring-boot-sample-atmosphere\\pom.xml clean' 
             }
         }
 		
 		stage('Compile') { 
             steps {
-                bat 'mvn compile' 
+                bat 'mvn -f spring-boot-samples\\spring-boot-sample-atmosphere\\pom.xml compile' 
             }
         }
 		
 		stage('Package') { 
             steps {
-                bat 'mvn package' 
+                bat 'mvn -f spring-boot-samples\\spring-boot-sample-atmosphere\\pom.xml package' 
             }
         }
 		
 		stage('Install') { 
             steps {
-                bat 'mvn install' 
+                bat 'mvn -f spring-boot-samples\\spring-boot-sample-atmosphere\\pom.xml install' 
             }
         }
 		
 		stage('Test') { 
             steps {
-                bat 'mvn test' 
+                bat 'mvn -f spring-boot-samples\\spring-boot-sample-atmosphere\\pom.xml test' 
             }
         }
     }
